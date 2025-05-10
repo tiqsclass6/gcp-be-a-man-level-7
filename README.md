@@ -8,16 +8,18 @@
 
 This project provisions a **Google Cloud Storage (GCS)** bucket using Terraform and hosts a custom website featuring a *Heiße Deutsche Frau* image and a **Darth Malgus-themed 404 error page**. The bucket is configured for **public object access** and **directory listing**, enabling full website behavior using only GCS.
 
+🔗 **GitHub Repository**: [gcp-be-a-man-level-7](https://github.com/tiqsclass6/gcp-be-a-man-level-7/)
+
 ---
 
 ## 📦 Purpose
 
 This project demonstrates:
 
-- 🚀 Infrastructure as Code with Terraform
-- ☁️ Static site hosting via GCP Cloud Storage
-- 🔐 Public IAM configuration using `roles/storage.objectViewer`
-- 🧱 Custom `germany.html` + `404.html` for themed site delivery
+- 🚀 Infrastructure as Code with Terraform  
+- ☁️ Static site hosting via GCP Cloud Storage  
+- 🔐 Public IAM configuration using `roles/storage.objectViewer`  
+- 🧱 Custom `germany.html` + `404.html` for themed site delivery  
 
 ---
 
@@ -28,7 +30,7 @@ be-a-man-level-7/
 ├── resources/
 │   ├── 404.html                 # Custom Darth Malgus 404 error page
 │   ├── germany.jpg              # Heiße Deutsche Frau image file
-│   └── germany.html               # Main landing page (homepage)
+│   └── germany.html             # Main landing page (homepage)
 ├── 0-authentication.tf         # Google Cloud provider & credentials setup
 ├── 1-variables.tf              # Terraform input variables
 ├── 2-gcs-bucket.tf             # GCS bucket creation & website config
@@ -69,5 +71,6 @@ For full savage status:
 
 ## 🔗 Useful Links
 
+- [User Guide - Be Like a Man Level 7](https://github.com/tiqsclass6/gcp-be-a-man-level-7)
 - [Terraform GCS Bucket Docs](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket)
 - [Google Cloud Storage Website Hosting](https://cloud.google.com/storage/docs/hosting-static-website)

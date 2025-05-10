@@ -51,14 +51,14 @@ be-a-man-level-7/
 
 ## ⚙️ Step-by-Step Deployment with Terraform
 
-### 1. 🧪 Configure Your Variables
+### 1. 🧪 Configure Your Authentication
 
-Edit `0-authentication`:
+Edit `0-authentication.tf`:
 
 ```hcl
-project     = "your-gcp-project-id"
+project     = "your-gcp-project-id" # Change to your project ID
 region      = "us-central1"
-bucket_name = "be-a-man-level-7"
+bucket_name = "your-bucket-name" # Change to your bucket name
 ```
 
 ### 2. 🪄 Initialize Terraform
@@ -88,7 +88,7 @@ terraform plan
 ### 6. 🚀 Apply Your Deployment
 
 ```bash
-terraform apply
+terraform apply -auto-approve
 ```
 
 - This will create:
@@ -102,9 +102,9 @@ terraform apply
 
 | File             | Purpose                        | Access URL                                               |
 |------------------|--------------------------------|-----------------------------------------------------------|
-| `germany.html`   | Main landing page              | <https://storage.googleapis.com/germany-class-6-5-tiqs/germany.html>             |
-| `germany.jpg`    | Image included in HTML         | <http://germany.storage.googleapis.com/germany.jpg>  |
-| `404.html`       | Custom error page              | Trigger by visiting a non-existent path                  |
+| `germany.html`   | Main landing page              | <https://storage.googleapis.com/be-a-man-level-7/germany.html> |
+| `germany.jpg`    | Image included in HTML         | <https://storage.googleapis.com/be-a-man-level-7/germany.jpg> |
+| `404.html`       | Custom error page              | <https://storage.googleapis.com/be-a-man-level-7/404.html> |
 
 ![germany.jpg](/Screenshots/germany.jpg)
 ![germany1.jpg](/Screenshots/germany1.jpg)
@@ -117,7 +117,6 @@ terraform apply
 Terraform configures:
 
 - `roles/storage.objectViewer` for `allUsers` (object access)
-- `roles/storage.legacyBucketReader` for `allUsers` (bucket listing)
 
 ---
 
@@ -138,6 +137,40 @@ Terraform configures:
    - Add `allUsers` with:
      - `Storage Object Viewer`
      - `Storage Legacy Bucket Reader`
+
+---
+
+## 🧰 Troubleshooting
+
+If you run into issues, try the following solutions:
+
+### 🔐 Access Denied or 403 Errors
+
+- Make sure the bucket has **public IAM roles**:
+  - `roles/storage.objectViewer` for `allUsers`
+- Confirm files are uploaded to the correct bucket path
+- Verify bucket permissions from the **Cloud Console**
+
+### 🌐 Website Not Displaying
+
+- Double-check the website configuration in the **bucket settings**:
+  - Main page: `germany.html`
+  - Not found page: `404.html`
+- Visit: `https://storage.googleapis.com/[your-bucket-name]/germany.html`
+
+### 📤 Files Not Uploading
+
+- Ensure Terraform scripts are pointing to the correct local file paths:
+  - `resources/germany.html`
+  - `resources/germany.jpg`
+  - `resources/404.html`
+- Confirm that the `project`, `region`, and `bucket_name` values are accurate
+
+### 🛑 Terraform Errors
+
+- Run `terraform fmt` and `terraform validate` to catch syntax or config errors
+- If `terraform apply` fails, run `terraform plan` again to check for drift or conflicts
+- Delete `.terraform` and re-run `terraform init` if issues persist
 
 ---
 
