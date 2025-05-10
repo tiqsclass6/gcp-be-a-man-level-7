@@ -136,7 +136,6 @@ Terraform configures:
 4. In Permissions:
    - Add `allUsers` with:
      - `Storage Object Viewer`
-     - `Storage Legacy Bucket Reader`
 
 ---
 
