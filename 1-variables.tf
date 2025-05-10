@@ -2,7 +2,7 @@
 variable "project_id" {
   description = "Your Google Cloud Project ID"
   type        = string
-  default     = "class-6-5-tiqs" # Replace with your actual GCP project ID
+  default     = "your-project-id" # Replace with your actual GCP project ID
 }
 
 # GCP region for bucket creation
@@ -16,19 +16,19 @@ variable "region" {
 variable "bucket_name" {
   description = "Unique name of the bucket"
   type        = string
-  default     = "be-a-man-level-7" # Must be unique across all GCP projects.
+  default     = "your-bucket-name" # Must be unique across all GCP projects.
 }
 
 # Local path to the image to upload (germany.jpg or other)
 variable "germany" {
   description = "Path to Heiße Deutsche Frau (image file)"
   type        = string
-  default     = "germany.jpg" # Use your own file name
+  default     = "photo.jpg" # Use your own file name
 }
 
 # Local path to the main HTML file (landing page)
 variable "index_file" {
   description = "Path to the germany.html file"
   type        = string
-  default     = "germany.html"
+  default     = "index.html" # Use your own file name
 }
