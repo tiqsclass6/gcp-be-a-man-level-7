@@ -52,6 +52,53 @@ be-a-man-level-7/
 
 ---
 
+## ⚙️ Step-by-Step Deployment with Terraform
+
+### 1. 🧪 Configure Your Authentication
+
+Edit `0-authentication.tf`:
+
+```hcl
+project     = "your-gcp-project-id" # Change to your project ID
+region      = "us-central1"
+bucket_name = "your-bucket-name" # Change to your bucket name
+```
+
+### 2. 🪄 Initialize Terraform
+
+```bash
+terraform init
+```
+
+### 3. 🗺️ Format Terraform
+
+```bash
+terraform fmt
+```
+
+### 4. ✅ Validate Terraform
+
+```bash
+terraform validate
+```
+
+### 5. 🔍 Plan for Deployment
+
+```bash
+terraform plan
+```
+
+### 6. 🚀 Apply Your Deployment
+
+```bash
+terraform apply -auto-approve
+```
+
+- This will create:
+  - A GCS bucket
+  - Public access permissions
+  - Upload of `germany.html`, `germany.jpg`, and `404.html`
+
 ## 🎖 Extra Credit
 
 For full savage status:

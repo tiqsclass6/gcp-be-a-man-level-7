@@ -140,4 +140,4 @@ Terraform configures:
 
 ---
 
-**That’s it! Your leg will survive from Chewbecca for another 24 hours.**
+**That’s it! Your leg will survive from Chewbecca for at least another 24 hours.**
