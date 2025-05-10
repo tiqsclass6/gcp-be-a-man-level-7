@@ -2,7 +2,7 @@
 # Creates a Google Cloud Storage bucket for static website hosting
 # Reference: https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket
 
-resource "google_storage_bucket" "germany-class-6-5-tiqs" {
+resource "google_storage_bucket" "be-a-man-level-7" {
   name          = var.bucket_name # The globally unique name of the bucket
   location      = var.region      # GCP region where the bucket will reside
   force_destroy = true            # Allows Terraform to delete bucket even if it contains objects

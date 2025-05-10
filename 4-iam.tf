@@ -3,20 +3,8 @@
 
 # Allow public read access to objects (germany.jpg, germany.html)
 resource "google_storage_bucket_iam_binding" "object_viewer" {
-  bucket = google_storage_bucket.germany-class-6-5-tiqs.name
+  bucket = google_storage_bucket.be-a-man-level-7.name
   role   = "roles/storage.objectViewer"
-
-  members = [
-    "allUsers"
-  ]
-}
-
-# Allow public listing of the bucket (legacy access required)
-# Reference: https://cloud.google.com/storage/docs/access-control/iam-roles#legacy-roles
-
-resource "google_storage_bucket_iam_binding" "bucket_reader" {
-  bucket = google_storage_bucket.germany-class-6-5-tiqs.name
-  role   = "roles/storage.legacyBucketReader"
 
   members = [
     "allUsers"

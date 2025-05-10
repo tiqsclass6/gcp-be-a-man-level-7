@@ -3,7 +3,7 @@
 
 output "germany_image_url" {
   description = "Public URL for the uploaded image"
-  value       = "https://storage.googleapis.com/${google_storage_bucket.germany-class-6-5-tiqs.name}/${google_storage_bucket_object.germany.name}"
+  value       = "https://storage.googleapis.com/${google_storage_bucket.be-a-man-level-7.name}/${google_storage_bucket_object.germany.name}"
 }
 
 # Output the public site URL for the GCS-hosted website
@@ -11,5 +11,5 @@ output "germany_image_url" {
 
 output "site_url" {
   description = "Public URL to access the custom website"
-  value       = "http://${google_storage_bucket.germany-class-6-5-tiqs.name}.storage.googleapis.com/"
+  value       = "https://storage.googleapis.com/${google_storage_bucket.be-a-man-level-7.name}/${google_storage_bucket_object.germany_html.name}"
 }

@@ -3,10 +3,10 @@
 # https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_object
 
 resource "google_storage_bucket_object" "germany" {
-  name         = "germany.jpg"                                     # File name as it will appear in the bucket
-  bucket       = google_storage_bucket.germany-class-6-5-tiqs.name # Target bucket for upload
-  source       = "resources/germany.jpg"                           # Local file path
-  content_type = "image/jpeg"                                      # MIME type for browser display
+  name         = "germany.jpg"                               # File name as it will appear in the bucket
+  bucket       = google_storage_bucket.be-a-man-level-7.name # Target bucket for upload
+  source       = "resources/germany.jpg"                     # Local file path
+  content_type = "image/jpeg"                                # MIME type for browser display
 }
 
 # Upload the main HTML page (homepage) to the bucket
@@ -14,7 +14,7 @@ resource "google_storage_bucket_object" "germany" {
 
 resource "google_storage_bucket_object" "germany_html" {
   name         = "germany.html" # File name served by GCS as homepage
-  bucket       = google_storage_bucket.germany-class-6-5-tiqs.name
+  bucket       = google_storage_bucket.be-a-man-level-7.name
   source       = "resources/germany.html"
   content_type = "text/html"
 }
@@ -24,7 +24,7 @@ resource "google_storage_bucket_object" "germany_html" {
 
 resource "google_storage_bucket_object" "not_found" {
   name         = "404.html" # GCS serves this for not-found errors
-  bucket       = google_storage_bucket.germany-class-6-5-tiqs.name
+  bucket       = google_storage_bucket.be-a-man-level-7.name
   source       = "resources/404.html"
   content_type = "text/html"
 }
