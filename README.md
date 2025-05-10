@@ -71,6 +71,6 @@ For full savage status:
 
 ## 🔗 Useful Links
 
-- [User Guide - Be Like a Man Level 7](https://github.com/tiqsclass6/gcp-be-a-man-level-7)
+- [User Guide - Be Like a Man Level 7](https://github.com/tiqsclass6/gcp-be-a-man-level-7/blob/main/USER_GUIDE.md)
 - [Terraform GCS Bucket Docs](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket)
 - [Google Cloud Storage Website Hosting](https://cloud.google.com/storage/docs/hosting-static-website)
